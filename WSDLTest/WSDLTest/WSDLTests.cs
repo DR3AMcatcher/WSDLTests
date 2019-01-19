@@ -171,7 +171,7 @@ namespace WSDLTest
                     + Environment.NewLine + "With Message " + TestContext.CurrentContext.Result.Message + Environment.NewLine + "Call stack: " + TestContext.CurrentContext.Result.StackTrace + System.Environment.NewLine;
             }
         }
-
+        //
         //Action that will be executed after all test
         [OneTimeTearDown]
         public void FinalTearDown()
