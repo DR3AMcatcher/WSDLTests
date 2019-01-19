@@ -83,9 +83,9 @@ namespace WSDLTest
         /// <param name="holidayCode"></param>
         /// <param name="year"></param>
         /// <param name="exceptionMessage"></param>
-        [TestCase(Country.Canada, "FLAG-DAY", 2017, "holiday code provided was invalid")]
-        [TestCase(Country.Canada, "FLAG-DAY", 2000, "The year provided was invalid")]
-        [TestCase(Country.Canada, "FLAG-DAY", 2017, "The year provided was invalid")]
+        [TestCase(Country.Canada, "FLAG-DAY", 2017, "The holiday code provided was invalid")]
+        [TestCase(Country.Canada, "FLAG-DAY", 2000, "The holiday code provided was invalid")]
+        [TestCase(Country.Canada, "FLAG-DAY", 2012, "The holiday code provided was invalid")]
         public void GetHolidayDateE(Country country, string holidayCode, int year, string exceptionMessage)
         {
             try
@@ -94,7 +94,7 @@ namespace WSDLTest
             }
             catch (Exception e)
             {
-                Assert.IsFalse(e.Message.Contains(exceptionMessage));
+                Assert.IsTrue(e.Message.Contains(exceptionMessage));
             }
             Assert.Fail("Exception expected!");
         }
