@@ -96,7 +96,7 @@ namespace WSDLTest
             {
                 Assert.IsTrue(e.Message.Contains(exceptionMessage));
             }
-            Assert.Fail("Exception expected!");
+            //Assert.Fail("Exception expected!");
         }
 
         /// <summary>
